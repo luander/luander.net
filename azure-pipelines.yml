@@ -19,8 +19,8 @@ steps:
     imageName: 'jekyll/builder:latest'
     # mount the source code directory and binaries directory in the container
     volumes: |
-      $(build.sourcesDirectory):/srv/jekyll
-      $(build.binariesDirectory):/srv/jekyll/_site
+      $(build.sourcesDirectory)/site:/srv/jekyll
+      $(build.binariesDirectory)/site:/srv/jekyll/_site
     # set an environment variable inside the container
     envVars: 'JEKYLL_ENV=production'
     # execute a custom script when the container starts
