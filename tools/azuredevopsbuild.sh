@@ -91,8 +91,8 @@ _build() {
   cd $CONTAINER
   echo "$ cd $(pwd)"
 
-  bash _scripts/sh/create_pages.sh
-  bash _scripts/sh/dump_lastmod.sh
+  # bash _scripts/sh/create_pages.sh
+  # bash _scripts/sh/dump_lastmod.sh
 
   CMD+=" -d ${DEST}"
   echo "\$ $CMD"
