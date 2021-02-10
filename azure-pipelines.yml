@@ -24,7 +24,7 @@ steps:
     # set an environment variable inside the container
     envVars: 'JEKYLL_ENV=production'
     # execute a custom script when the container starts
-    containerCommand: 'jekyll build'
+    containerCommand: '/srv/jekyll/tools/azuredevopsbuild.sh -d /srv/jekyll/_site'
     # do not run the container in background
     detached: false
 # publish the artifact to Azure DevOps
