@@ -64,7 +64,7 @@ _init() {
 
   local _temp=$(mktemp -d)
   cp -r * $_temp
-  cp -r .git $_temp
+  # cp -r .git $_temp
   mv $_temp $CONTAINER
 }
 
@@ -83,7 +83,7 @@ init() {
 
   temp=$(mktemp -d)
   cp -r * $temp
-  cp -r .git $temp
+  # cp -r .git $temp
   mv $temp $CONTAINER
 }
 
