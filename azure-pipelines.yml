@@ -1,0 +1,34 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-default
+
+steps:
+- task: Docker@0
+  displayName: 'Run Jekyll'
+  inputs:
+    containerRegistryType: 'Container Registry'
+    action: 'Run an image'
+    # use the latest version of jekyll/builder docker image from Docker Hub
+    imageName: 'jekyll/builder:latest'
+    # mount the source code directory and binaries directory in the container
+    volumes: |
+      $(build.sourcesDirectory):/srv/jekyll
+      $(build.binariesDirectory):/srv/jekyll/_site
+    # set an environment variable inside the container
+    envVars: 'JEKYLL_ENV=production'
+    # execute a custom script when the container starts
+    containerCommand: 'jekyll build'
+    # do not run the container in background
+    detached: false
+# publish the artifact to Azure DevOps
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(build.binariesDirectory)'
+    artifactName: site
