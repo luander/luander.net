@@ -80,3 +80,22 @@ Run `git pull` to update your local repo to the newly added changes and edit the
 - name: Jekyll build
   run: jekyll build
 ```
+2. This should be enough changes to make your Jekyll blog compile and be deployed to the static web app in Azure. Commit and push your changes
+```
+git add .
+git commit -m "Your commit message"
+git push
+```
+After the Github action succeeds, you'll be able to access your newly deployed Jekyll blog by going to Azure and checking the Static Web App url:
+![new-static-web-app](/assets/img/jekyll-az-static-web-app/az-web-app-new7.jpg)
+
+### Configuring a custom domain
+Now, you don't want to access your Jekyll blog using a complex url, you want to map it to the domain you own.
+1. To achieve that you need to go to **Custom Domains** menu in the Azure Portal and select `+Add`
+2. Enter your domain and click Next
+![new-static-web-app](/assets/img/jekyll-az-static-web-app/az-web-app-new6.jpg)
+3. Configure a new CNAME DNS record pointing to your Azure Static Web App. This can be done where you bought your domain. 
+
+### Configuring a root domain in an Azure Static Web App
+This isn't officially supported as of now. But there's a way if you really need it. Find more info on [this external blog post](https://burkeholland.github.io/posts/static-app-root-domain/)
+
