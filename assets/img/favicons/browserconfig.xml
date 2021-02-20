@@ -1,0 +1,16 @@
+---
+layout: compress
+
+# A part of the Favicons
+---
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon-72x72.png" />
+      <square150x150logo src="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon-144x144.png" />
+      <square310x310logo src="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon.png" />
+      <TileColor>#ffffff</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
