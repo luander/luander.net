@@ -21,6 +21,4 @@ I first worked as a security consultant for Philips Digital Pathology. The poten
 ![nl](/assets/img/about/nl.jpg)
 _First day in the Netherlands, Eindhoven, Apr. 2017_
 
-Amidst the 2020 pandemic we got a puppy dog to make us company and keep us sane, his name is Luke and he is a small dachshund.
-![Luke](/assets/img/about/luke.jpg)
-_Luke and myself, May 2020_
+Currently I work at Schuberg Philis helping out on all things security, Azure and Kubernetes Security are my passion and penetration tests also come my way more often than not!
