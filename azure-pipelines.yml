@@ -46,7 +46,7 @@ stages:
   jobs:
   - job: deploy
     steps:
-    - task: DownloadBuildArtifacts@0
+    - task: DownloadBuildArtifacts@1.193.0
       inputs:
         buildType: 'current'
         downloadType: 'single'
