@@ -53,7 +53,7 @@ stages:
         artifactName: 'site'
         downloadPath: '$(System.ArtifactsDirectory)'
 
-    - task: AzureResourceManagerTemplateDeployment@3
+    - task: AzureResourceManagerTemplateDeployment@3.210.1
       inputs:
         deploymentScope: 'Resource Group'
         azureResourceManagerConnection: $(serviceconnection)
