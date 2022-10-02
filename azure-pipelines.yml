@@ -36,7 +36,7 @@ stages:
         # do not run the container in background
         detached: false
     # publish the artifact to Azure DevOps
-    - task: PublishBuildArtifacts@1
+    - task: PublishBuildArtifacts@1.211.0
       inputs:
         pathtoPublish: '$(build.binariesDirectory)/site'
         artifactName: site
